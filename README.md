@@ -18,6 +18,16 @@ npm install --save list-to-function
 
 ## Use
 
+```js
+const listToFunction = require('list-to-function')
+const nextItem = listToFunction(['foo', 'bar'])
+nextItem() // 'foo'
+nextItem() // 'bar'
+nextItem() // undefined
+```
+
+Original list is NOT mutated; it is cloned internally.
+
 ### Small print
 
 Author: Gleb Bahmutov &lt;gleb.bahmutov@gmail.com&gt; &copy; 2017
